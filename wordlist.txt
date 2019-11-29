@@ -1,8 +1,8 @@
-ALGORITHM
-CRYPTOGRAPHY
-DATAMINING
-ENCRYPTION
-PERMUTATION
-PYTHON
-SOLVE
-TECHNOLOGY
+algorithm
+cryptography
+datamining
+encryption
+permutation
+python
+solve
+technology
