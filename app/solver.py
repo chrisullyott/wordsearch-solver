@@ -1,14 +1,12 @@
 from .file import *
-import itertools
 
 class Solver:
+    directions = [
+        [0, -1], [-1, 0], [0, 1], [1, 0], [-1, -1], [-1, 1], [1, -1], [1, 1]
+    ]
+
     def __init__(self, puzzle):
         self.puzzle = puzzle
-
-    def get_directions(self):
-        directions = list(itertools.product([0, -1, 1], repeat=2))
-        del(directions[0])
-        return directions
 
     def find_candidates(self, char):
         candidates = []
@@ -24,7 +22,7 @@ class Solver:
         word_chars = list(word)
         dim = self.puzzle.dim
         for candidate in self.find_candidates(word_chars[0]):
-            for direction in self.get_directions():
+            for direction in self.directions:
                 test_coords = []
                 for char_key, char in enumerate(word_chars):
                     row_key = candidate[0] + (direction[0] * char_key)
