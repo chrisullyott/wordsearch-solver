@@ -45,11 +45,10 @@ class Solver:
         return found_coords
 
     def find_words(self, words):
-        all_coords = []
+        coords = []
         for word in words:
-            coords = self.find_word(word)
-            all_coords = all_coords + coords
-        return all_coords
+            coords = coords + self.find_word(word)
+        return coords
 
     def find_from_wordlist(self, wordlist):
         words = File.get_contents_upper(wordlist).splitlines()
