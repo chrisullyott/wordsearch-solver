@@ -1,9 +1,11 @@
 # wordsearch-solver
 
-Finds words hidden in a two-dimensional grid of characters. A personal exercise in algorithms that traverse lists in creative ways.
+Finds words hidden in a two-dimensional grid of characters. A personal exercise in designing algorithms that traverse lists in creative ways.
+
+### Example
 
 ```
-$ python3 main.py puzzle.txt wordlist.txt
+$ python3 solver.py puzzle.txt wordlist.txt
 ```
 
 ```
@@ -24,3 +26,7 @@ $ python3 main.py puzzle.txt wordlist.txt
  ·  ·  ·  ·  ·  ·  E  N  C  R  Y  P  T  I  O  N  ·  ·  ·  ·  ·  ·  ·
  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  T  E  C  H  N  O  L  O  G  Y  ·  ·
 ```
+
+### Notes
+
+The puzzle and wordlist files accept either uppercase or lowercase letters. 
