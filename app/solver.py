@@ -33,8 +33,7 @@ class Solver:
                 for char_key, char in enumerate(word_chars):
                     row_key = candidate[0] + (direction[0] * char_key)
                     col_key = candidate[1] + (direction[1] * char_key)
-                    coord_exists = self.puzzle.coord_exists(row_key, col_key)
-                    if coord_exists and char == self.puzzle.grid[row_key][col_key]:
+                    if self.puzzle.coord_matches(row_key, col_key, char):
                         test_coords.append([row_key, col_key])
                     else:
                         break

@@ -10,7 +10,11 @@ class Puzzle:
         self.dim = [len(self.grid), len(self.grid[0])]
 
     def coord_exists(self, row_key, col_key):
-        return (row_key < self.dim[0]) and (col_key < self.dim[1])
+        return row_key < self.dim[0] and col_key < self.dim[1]
+
+    def coord_matches(self, row_key, col_key, char):
+        return (self.coord_exists(row_key, col_key)
+            and self.grid[row_key][col_key] == char)
 
     def print_all(self):
         string = ''
