@@ -9,18 +9,16 @@ class Puzzle:
             self.grid.append(row)
         self.dim = [len(self.grid), len(self.grid[0])]
 
-    def get_all_coords(self):
-        coords = []
-        for row_key in range(len(self.grid)):
-            for col_key in range(len(self.grid[row_key])):
-                coords.append([row_key, col_key])
-        return coords
-
     def coord_exists(self, row_key, col_key):
         return (row_key < self.dim[0]) and (col_key < self.dim[1])
 
     def print_all(self):
-        return self.print_coords(self.get_all_coords())
+        string = ''
+        for row in self.grid:
+            for cell in row:
+                string += ' ' + cell + ' '
+            string += '\n'
+        print(string)
 
     def print_coords(self, coords):
         string = ''
