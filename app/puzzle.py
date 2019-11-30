@@ -26,14 +26,11 @@ class Puzzle:
         string = ''
         for row_key, row in enumerate(self.grid):
             for col_key, cell in enumerate(row):
-                string_val = ''
+                print_cell = False
                 for coord in coords:
                     if (row_key == coord[0] and col_key == coord[1]):
-                        string_val = ' ' + cell + ' '
+                        print_cell = True
                         break
-                if (string_val):
-                    string += string_val
-                else:
-                    string += ' · '
+                string += ' ' + cell + ' ' if print_cell is True else ' · '
             string += '\n'
         print(string)
