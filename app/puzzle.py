@@ -30,7 +30,7 @@ class Puzzle:
             for col_key, cell in enumerate(row):
                 print_cell = False
                 for coord in coords:
-                    if (row_key == coord[0] and col_key == coord[1]):
+                    if row_key == coord[0] and col_key == coord[1]:
                         print_cell = True
                         break
                 string += ' ' + cell + ' ' if print_cell is True else ' · '
