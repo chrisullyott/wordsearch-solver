@@ -1,8 +1,6 @@
 # wordsearch-solver
 
-Finds words hidden in a common wordsearch puzzle by scanning a grid of characters in all possible directions (including backwards and diagonally).
-
-A personal exercise in designing algorithms that traverse lists in creative ways.
+Finds words hidden in a common wordsearch puzzle by scanning a grid of characters in all possible directions, including backwards and diagonally.
 
 ### Example
 
