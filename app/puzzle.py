@@ -11,8 +11,8 @@ class Puzzle:
 
     def get_all_coords(self):
         coords = []
-        for row_key, row in enumerate(self.grid):
-            for col_key, cell in enumerate(row):
+        for row_key in range(len(self.grid)):
+            for col_key in range(len(self.grid[row_key])):
                 coords.append([row_key, col_key])
         return coords
 
