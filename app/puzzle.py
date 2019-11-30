@@ -16,6 +16,9 @@ class Puzzle:
                 coords.append([row_key, col_key])
         return coords
 
+    def coord_exists(self, row_key, col_key):
+        return (row_key < self.dim[0]) and (col_key < self.dim[1])
+
     def print_all(self):
         return self.print_coords(self.get_all_coords())
 
