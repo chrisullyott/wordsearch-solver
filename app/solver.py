@@ -26,7 +26,7 @@ class Solver:
 
     def find_word(self, word):
         found_coords = []
-        word_chars = list(word.strip().upper())
+        word_chars = list(word.replace(' ', '').strip().upper())
         for candidate in self.find_candidates(word_chars[0]):
             for direction in self.directions:
                 test_coords = []
