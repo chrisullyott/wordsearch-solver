@@ -1,7 +1,7 @@
 from .file import *
 
 class Solver:
-    # Two-digit permutations of [-1, 0, 1], less [0, 0].
+    # Two-digit permutations of [-1, 0, 1], excluding [0, 0].
     directions = [
         [ 0,  -1],
         [-1,   0],
