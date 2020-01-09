@@ -1,10 +1,10 @@
-from .file import *
+from .file import read_file_upper
 
 class Puzzle:
     def __init__(self, file):
         self.file = file
         self.grid = []
-        for line in File.get_contents_upper(file).splitlines():
+        for line in read_file_upper(file).splitlines():
             row = list(line.replace(' ', ''))
             self.grid.append(row)
         self.dim = [len(self.grid), len(self.grid[0])]

@@ -1,4 +1,4 @@
-from .file import *
+from .file import read_file_upper
 
 class Solver:
     # Two-digit permutations of [-1, 0, 1], excluding [0, 0].
@@ -48,5 +48,5 @@ class Solver:
         return coords
 
     def find_from_wordlist(self, wordlist):
-        words = File.get_contents_upper(wordlist).splitlines()
+        words = read_file_upper(wordlist).splitlines()
         return self.find_words(words)
