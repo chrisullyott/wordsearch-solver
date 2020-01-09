@@ -1,7 +1,13 @@
 from .file import read_file_upper
 
 class Solver:
-    # Two-digit permutations of [-1, 0, 1], excluding [0, 0].
+    """
+    Solver for a wordsearch puzzle.
+
+    Variables:
+        directions {list} -- Two-digit permutations of [-1, 0, 1], excluding [0, 0].
+    """
+
     directions = [
         [ 0,  -1],
         [-1,   0],
@@ -25,21 +31,20 @@ class Solver:
         return candidates
 
     def find_word(self, word):
-        found_coords = []
         word_chars = list(word.replace(' ', '').strip().upper())
         for candidate in self.find_candidates(word_chars[0]):
             for direction in self.directions:
-                test_coords = []
+                coords = []
                 for char_key, char in enumerate(word_chars):
                     row_key = candidate[0] + (direction[0] * char_key)
                     col_key = candidate[1] + (direction[1] * char_key)
                     if self.puzzle.coord_matches(row_key, col_key, char):
-                        test_coords.append([row_key, col_key])
+                        coords.append([row_key, col_key])
                     else:
                         break
-                if len(test_coords) >= len(word_chars):
-                    found_coords = found_coords + test_coords
-        return found_coords
+                if len(coords) == len(word_chars):
+                    return coords
+        return []
 
     def find_words(self, words):
         coords = []

@@ -1,6 +1,10 @@
 from .file import read_file_upper
 
 class Puzzle:
+    """
+    A data type for a wordsearch puzzle, stored as a two-dimensional array.
+    """
+
     def __init__(self, file):
         self.file = file
         self.grid = []
