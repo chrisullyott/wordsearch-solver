@@ -13,8 +13,8 @@ class Puzzle:
         return row_key < self.dim[0] and col_key < self.dim[1]
 
     def coord_matches(self, row_key, col_key, char):
-        return (self.coord_exists(row_key, col_key)
-            and self.grid[row_key][col_key] == char)
+        coord_exists = self.coord_exists(row_key, col_key)
+        return coord_exists and self.grid[row_key][col_key] == char
 
     def print_all(self):
         string = ''
