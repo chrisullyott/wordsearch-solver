@@ -1,3 +1,2 @@
-from .file import *
-from .puzzle import *
-from .solver import *
+from .puzzle import Puzzle
+from .solver import Solver
